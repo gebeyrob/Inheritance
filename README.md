@@ -1,6 +1,10 @@
 # CSC 207: Text Editor
 
-**Author**: _(TODO: fill me in)_
+**Author**: 
+
+Valeriia Kosse
+
+Robel Gebeyehu
 
 ## Resources Used
 
