@@ -122,7 +122,8 @@ public class ArrayList<T> implements List<T> {
      * Cannot be implemented for a generic list because T can be any type, so we
      * cannot have a default ordering.
      * 
-     * @throws UnsupportedOperationException always, 
+     * @throws UnsupportedOperationException always, becasue comparsison of 
+     * generic types is not possible.
      */
     public void insertionSort() {
         throw new UnsupportedOperationException();
