@@ -16,7 +16,6 @@ public class ArrayList {
     /**
      * Constructs a new, empty array list.
      */
-    @SuppressWarnings("unchecked")
     public ArrayList() {
         this.data = new int[INITIAL_SIZE];
         this.sz = 0;
