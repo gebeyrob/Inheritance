@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * An array-based implementation of a list, specialized to ints.
  */
-public class ArrayList<T> implements List<T>{
+public class ArrayList<T> implements List<T> {
 
     private static final int INITIAL_SIZE = 8;
 
@@ -73,5 +73,48 @@ public class ArrayList<T> implements List<T>{
             sz -= 1;
             return ret;
         }
+    }
+
+    /**
+     * Inserts sep in between each element of the list.
+     * 
+     * @param sep the separator to intersperse
+     */
+    public void intersperse(T sep) {
+        for (int i = 0; i < sz; i += 2) {
+            ensureCapacity();
+            for (int j = sz; j > i; j--) {
+                data[j] = data[j - 1];
+            }
+            data[i] = sep;
+            sz++;
+        }
+    }
+
+    public T maximum() {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * @return a string representation of the list
+     */
+    public String toString() {
+        String result = "[";
+        for (int i = 0; i < sz; i++) {
+            result += data[i];
+            if (i < sz - 1) {
+                result += ", ";
+            }
+        }
+        return result + "]";
+    }
+
+    /**
+     * Cannot be implemented for a generic list because T can be any type, so we
+     * cannot
+     * have a default ordering.
+     */
+    public void insertionSort() {
+        throw new UnsupportedOperationException();
     }
 }
