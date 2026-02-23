@@ -91,6 +91,15 @@ public class ArrayList<T> implements List<T> {
         }
     }
 
+    
+    /**
+     * Cannot be implemented for a generic list because T can be any type, so we
+     * cannot have a maximum value chosen.
+     * 
+     * @throws UnsupportedOperationException always, because the comparison of the
+     * arbitrary types is not supported.
+     * 
+     */
     public T maximum() {
         throw new UnsupportedOperationException();
     }
@@ -111,8 +120,9 @@ public class ArrayList<T> implements List<T> {
 
     /**
      * Cannot be implemented for a generic list because T can be any type, so we
-     * cannot
-     * have a default ordering.
+     * cannot have a default ordering.
+     * 
+     * @throws UnsupportedOperationException always, 
      */
     public void insertionSort() {
         throw new UnsupportedOperationException();
