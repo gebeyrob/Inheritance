@@ -16,7 +16,6 @@ public class ArrayList<T> implements List<T> {
     /**
      * Constructs a new, empty array list.
      */
-    @SuppressWarnings("unchecked")
     public ArrayList() {
         this.data = (T[]) new Object[INITIAL_SIZE];
         this.sz = 0;
